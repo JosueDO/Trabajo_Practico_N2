@@ -1,6 +1,6 @@
 class Dado extends GameObject{
   private int alto,ancho;
-  private PImage[] caras;//variable que guardara el valor aleatorio
+  private PImage[] caras;//guarda las imagenes del dado en una arreglo
   private int valor;
   
   /*CONSTRUCTOR POR DEFECTO*/

@@ -18,18 +18,18 @@ class Texto extends GameObject{
  }
  
  /*ASIGNA EL VALOR DEL MENSAJE DEPENDIENDO DEL VALOR DEL DADO*/
- public void setMensaje(int valor){
-   if(valor==1)
+ public void setMensaje(Dado dado){
+   if(dado.valor==1)
     mensaje="UNO";
-    else if(valor==2)
+    else if(dado.valor==2)
     mensaje="DOS";
-    else if(valor==3)
+    else if(dado.valor==3)
     mensaje="TRES";
-    else if(valor==4)
+    else if(dado.valor==4)
     mensaje="CUATRO";
-    else if(valor==5)
+    else if(dado.valor==5)
     mensaje="CINCO";
-    else if(valor==6)
+    else if(dado.valor==6)
     mensaje="SEIS";
  }
 }

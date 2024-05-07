@@ -8,7 +8,7 @@ public void setup(){
   start=false;
   dado= new Dado(new PVector(width/2,height/2));
   texto= new Texto(new PVector(width*3/4,height/3));
-  texto.setMensaje(dado.getValor());//el mensaje en pantalla depende del valor del dado
+  texto.setMensaje(dado);//el mensaje en pantalla depende del valor del dado
   tablero= new Tablero(new PVector(width/2,height/2),dado,texto);//tablero contiene dado y texto
 
 }
@@ -39,7 +39,7 @@ public void keyPressed(){
           dado= new Dado(new PVector(width/2,height/2));
           tablero.setDado(dado);
           texto= new Texto(new PVector(width*3/4,height/3));
-          texto.setMensaje(dado.getValor());
+          texto.setMensaje(dado);
           tablero.setTexto(texto);
         }else{
           println("NO HAY MAS ESPACIO");
