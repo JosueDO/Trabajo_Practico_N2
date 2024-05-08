@@ -2,7 +2,7 @@ abstract class GameObject{
   
   protected PVector posicion;
   protected PImage imagen;
-  protected PVector velocidad;
+  protected PVector velocidad;//atributo agregado porque sus subclases compartian el mismo atributo
   
   public abstract void display();
   public abstract void move(int direccion);

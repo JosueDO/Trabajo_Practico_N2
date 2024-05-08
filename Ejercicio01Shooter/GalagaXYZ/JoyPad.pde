@@ -1,3 +1,4 @@
+/* CLASE COMPLETAMENTE DISEÑADA PARA EL CONTROL DE MOVIMIENTO*/
 class JoyPad{
   private boolean upPressed, downPressed, rightPressed, leftPressed;
   

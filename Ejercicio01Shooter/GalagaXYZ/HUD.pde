@@ -1,18 +1,18 @@
 class HUD{
-  private PImage fondo;
   private PImage corazon;
   private String mensaje;
+  
+  /*CONSTRUCTOR*/
   public HUD(){
     corazon= loadImage("coraz.png");
-    fondo= loadImage("fondo.jpg");
     mensaje= "   x ";
   }
-  public void display(byte cantVidas){
+  
+  /*MUESTRA LA CANTIDAD DE VIDAS EN LA PARTE SUP DERECHA*/
+  public void display(Shooter nave){
     imageMode(CENTER);
-    
-    image(fondo,width/2,height/2,width,height);
     image(corazon,width*6/7,height/9,width/40,height/30);
     textSize(width/30);
-    text(mensaje+cantVidas,width*6/7,height/8);
+    text(mensaje+nave.cantVidas,width*6/7,height/8);
   }
 }

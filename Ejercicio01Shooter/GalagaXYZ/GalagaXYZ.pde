@@ -2,6 +2,7 @@ private Asteroide roca;
 private Shooter nave;
 private JoyPad joyPad;
 private HUD hud;
+private Escenario escenario;
 
 public void setup(){
   size(800,600);
@@ -11,16 +12,19 @@ public void setup(){
   nave.setVelocidad(new PVector(10,5));
   roca.setVelocidad(new PVector(0,5));
   joyPad=new JoyPad();
+  escenario= new Escenario();
 }
 public void draw(){
-  hud.display(nave.getCantVidas());
+  escenario.display();
+  hud.display(nave);
   roca.display();
-  if(roca.getPosicionY()<=height){
+  if(roca.getPosicionY()<=height){//pregunta si la roca llego al borde inferior
     roca.move(0);
   }else{
     roca.move(1);
   }
-  nave.display();
+  nave.display();//dibuja la nave
+  /*LOS IF POSTERIORES ACTUALIZAN LA POSICION DE LA NAVE NO LA DIBUJAN*/
   if(joyPad.isUpPressed()){
     nave.move(0);
   }
@@ -36,6 +40,9 @@ public void draw(){
   
 }
 
+/*TECLAS ESCOGIDAS PARA LOS MOVIMIENTOS DE LA NAVE
+W O UP: ARRIBA, S O DOWN: ABAJO, D O RIGHT:DERECHA, A O LEFT: IZQUIERDA
+MIENTRAS LAS TECLAS ESTEN PRESIONADAS ASIGNARA TRUE*/
 public void keyPressed(){
   if(key=='w' || key=='W' || keyCode==UP){
     joyPad.setUpPressed(true);
@@ -51,6 +58,9 @@ public void keyPressed(){
   }
 }
 
+/*CUANDO LAS TECLAS DEJEN DE PRESIONARSE LES ASIGNARA FALSE
+DE ESTA MANERA SE PODRA CONTROLAR QUE MIENTRAS SEA TRUE SE MOVERA Y FALSE SE QUEDARA QUIETO
+EN SUS RESPECTIVAS POSICIONES*/
 public void keyReleased(){
   if(key=='w' || key=='W' || keyCode==UP){
     joyPad.setUpPressed(false);
