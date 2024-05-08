@@ -4,7 +4,7 @@ class Tablero extends GameObject{
   private Texto texto;
   private int[] datos; //almacenara todos los valores de los dados que se vayan generando
   private int indice; // controla la posicion del ultimo valor guardado
-  private int longitud=10; //guarda la cantidad de valores del arreglo 
+  private int longitud; //guarda la cantidad de valores del arreglo 
   private PImage imagen;
 
 /*CONSTRUCTOR POR DEFECTO*/
@@ -14,6 +14,7 @@ class Tablero extends GameObject{
 /*CONSTRUCTOR POR SOBRECARGADO*/
   public Tablero(PVector posicion,Dado dado,Texto texto){
     imagen=loadImage("mesa.png");
+    longitud=10;
     indice=0;
     datos= new int[longitud];
     this.texto=texto;

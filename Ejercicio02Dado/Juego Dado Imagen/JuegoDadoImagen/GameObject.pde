@@ -1,7 +1,6 @@
-class GameObject{
+abstract class GameObject{
   
   protected PVector posicion;
   
-  public void display(){
-  }
+  public abstract void display();
 }
