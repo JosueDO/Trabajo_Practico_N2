@@ -16,7 +16,7 @@ public void setup(){
 }
 public void draw(){
   escenario.display();
-  hud.display(nave);
+  hud.mostrarCantVidas(nave);
   roca.display();
   if(roca.getPosicionY()<=height){//pregunta si la roca llego al borde inferior
     roca.move(0);

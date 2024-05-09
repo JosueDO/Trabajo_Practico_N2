@@ -9,7 +9,7 @@ class HUD{
   }
   
   /*MUESTRA LA CANTIDAD DE VIDAS EN LA PARTE SUP DERECHA*/
-  public void display(Shooter nave){
+  public void mostrarCantVidas(Shooter nave){
     imageMode(CENTER);
     image(corazon,width*6/7,height/9,width/40,height/30);
     textSize(width/30);
