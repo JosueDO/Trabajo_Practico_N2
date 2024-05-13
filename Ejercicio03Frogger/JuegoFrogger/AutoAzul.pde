@@ -11,10 +11,10 @@ class AutoAzul extends Vehiculo{
     image(imagen,this.posicion.x,this.posicion.y,this.ancho,this.altura);
   }
   public void move(){
-    if(this.posicion.x+this.ancho>escenario.posicion.x){
+    if(this.posicion.x+this.ancho>0){
       this.posicion.x-=this.velocidad.x;
     }else{
-      this.posicion.x=escenario.ancho;
+      this.posicion.x=width;
     }
   }
 }

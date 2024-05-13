@@ -1,4 +1,4 @@
-class Vehiculo extends GameObject{
+abstract class Vehiculo extends GameObject{
   protected float altura,ancho;
   
 }

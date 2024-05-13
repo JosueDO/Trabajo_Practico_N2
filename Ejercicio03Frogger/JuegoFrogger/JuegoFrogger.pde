@@ -1,24 +1,33 @@
 private Personaje pj;
 private Escenario escenario;
-private Vehiculo vehiculo;
 private SpawnerVehiculos spawnerVehiculos;
+private SpawnerTroncos spawnerTroncos;
+private HUD hud;
 
 
 
 public void setup(){
   size(600,600);
   escenario= new Escenario(new PVector(0,height/16*2));
-  pj= new Personaje(new PVector(width/2,height/32*30),new PVector(escenario.getAnchoBloque(),escenario.getAltoBloque()));
+  pj= new Personaje(new PVector(width/2,height/32*30),new PVector(escenario.getAnchoBloque(),escenario.getAltoBloque()),escenario);
   spawnerVehiculos= new SpawnerVehiculos();
   spawnerVehiculos.generarVehiculos(escenario);
+  spawnerTroncos=new SpawnerTroncos();
+  spawnerTroncos.generarTroncos(escenario);
+  hud=new HUD();
 
 }
 
 public void draw(){
   background(0);
   escenario.display();
+  hud.mostrarHIScore();
+  hud.mostrarPuntaje(pj);
+  hud.mostrarVidas(pj);
   spawnerVehiculos.display();
   spawnerVehiculos.move();
+  spawnerTroncos.display();
+  spawnerTroncos.move();
   pj.display();
  
   

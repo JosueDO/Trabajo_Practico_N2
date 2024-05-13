@@ -1,12 +1,14 @@
 class Personaje extends GameObject{
   private float ancho,alto;
+  private int puntaje,vidas;
   
-  public Personaje(PVector posicion,PVector velocidad){
+  public Personaje(PVector posicion,PVector velocidad,Escenario escenario){
     this.velocidad=velocidad;
     this.posicion=posicion;
+    this.puntaje=0;
+    this.vidas=5;
     ancho= escenario.ancho/14*0.8;
     alto= escenario.alto/13*0.8;
-
     this.posicion.x+=ancho/2;
     imagen=loadImage("sapo.png");
   }
