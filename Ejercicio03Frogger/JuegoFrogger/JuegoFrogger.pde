@@ -1,17 +1,24 @@
 private Personaje pj;
 private Escenario escenario;
-private JoyPad joyPad;
+private Vehiculo vehiculo;
+private SpawnerVehiculos spawnerVehiculos;
+
+
 
 public void setup(){
   size(600,600);
-  escenario= new Escenario();
+  escenario= new Escenario(new PVector(0,height/16*2));
   pj= new Personaje(new PVector(width/2,height/32*30));
-   joyPad=new JoyPad();
+  spawnerVehiculos= new SpawnerVehiculos();
+  spawnerVehiculos.generarVehiculos(escenario);
+
 }
 
 public void draw(){
   background(0);
   escenario.display();
+  spawnerVehiculos.display();
+  spawnerVehiculos.move();
   pj.display();
  
   

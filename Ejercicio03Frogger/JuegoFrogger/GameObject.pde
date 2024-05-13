@@ -3,6 +3,4 @@ abstract class GameObject{
   protected PVector velocidad;
   protected PImage imagen;
   
-  public void display(){
-  }
 }
