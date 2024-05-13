@@ -8,7 +8,7 @@ private SpawnerVehiculos spawnerVehiculos;
 public void setup(){
   size(600,600);
   escenario= new Escenario(new PVector(0,height/16*2));
-  pj= new Personaje(new PVector(width/2,height/32*30));
+  pj= new Personaje(new PVector(width/2,height/32*30),new PVector(escenario.getAnchoBloque(),escenario.getAltoBloque()));
   spawnerVehiculos= new SpawnerVehiculos();
   spawnerVehiculos.generarVehiculos(escenario);
 

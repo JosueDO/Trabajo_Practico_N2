@@ -31,4 +31,11 @@ class Escenario implements IDisplayable{
     rect(this.posicion.x,this.posicion.y+alto/13*12,ancho,alto/13);
     rect(this.posicion.x,this.posicion.y+alto/13*6,ancho,alto/13);
   }
+  
+  public float getAnchoBloque(){
+    return this.anchoBloque;
+  }
+  public float getAltoBloque(){
+    return this.altoBloque;
+  }
 }
