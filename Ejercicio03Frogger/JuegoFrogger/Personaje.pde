@@ -1,8 +1,10 @@
 class Personaje extends GameObject implements IDisplayable{
+  private Escenario escenario;
   private float ancho,alto;
   private int puntaje,vidas;
   
   public Personaje(PVector posicion,PVector velocidad,Escenario escenario){
+    this.escenario=escenario;
     this.velocidad=velocidad;
     this.posicion=posicion;
     this.puntaje=0;

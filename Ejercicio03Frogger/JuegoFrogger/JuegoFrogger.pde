@@ -9,7 +9,7 @@ private HUD hud;
 public void setup(){
   size(600,600);
   escenario= new Escenario(new PVector(0,height/16*2));
-  pj= new Personaje(new PVector(width/2,height/32*30),new PVector(escenario.getAnchoBloque(),escenario.getAltoBloque()),escenario);
+  pj= new Personaje(new PVector(width/2,height/32*30),new PVector(escenario.getAnchoBloque()/2,escenario.getAltoBloque()),escenario);
   spawnerVehiculos= new SpawnerVehiculos();
   spawnerVehiculos.generarVehiculos(escenario);
   spawnerTroncos=new SpawnerTroncos();

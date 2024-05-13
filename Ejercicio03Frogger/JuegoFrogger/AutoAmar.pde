@@ -1,5 +1,6 @@
 class AutoAmar extends Vehiculo{
   public AutoAmar(PVector posicion,PVector velocidad,Escenario escenario){
+    this.escenario=escenario;
     this.posicion=posicion;
     this.velocidad=velocidad;
     altura= escenario.altoBloque*0.9;
@@ -11,10 +12,10 @@ class AutoAmar extends Vehiculo{
     image(imagen,this.posicion.x,this.posicion.y,this.ancho,this.altura);
   }
   public void move(){
-    if(this.posicion.x+this.ancho>0){
+    if(this.posicion.x+this.ancho>this.escenario.posicion.x){
       this.posicion.x-=this.velocidad.x;
     }else{
-      this.posicion.x=width;
+      this.posicion.x=this.escenario.ancho;
     }
   }
 }
