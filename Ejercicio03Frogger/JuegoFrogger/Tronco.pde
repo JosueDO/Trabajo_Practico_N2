@@ -1,4 +1,4 @@
-class Tronco extends GameObject{
+class Tronco extends GameObject implements IDisplayable{
   private float ancho,alto;
   
   public Tronco(PVector posicion,PVector velocidad,float ancho,Escenario escenario){

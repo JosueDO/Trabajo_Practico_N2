@@ -1,4 +1,4 @@
-class SpawnerTroncos{
+class SpawnerTroncos implements IDisplayable{
   private Tronco troncosCortos[];
   private Tronco troncosLargos[];
   

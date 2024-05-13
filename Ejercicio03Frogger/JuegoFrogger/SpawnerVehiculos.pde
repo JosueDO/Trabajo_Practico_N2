@@ -1,4 +1,4 @@
-class SpawnerVehiculos{
+class SpawnerVehiculos implements IDisplayable{
   
   private Camion camiones[];
   private AutoAzul autosAzules[];

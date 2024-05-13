@@ -24,6 +24,7 @@ public void draw(){
   hud.mostrarHIScore();
   hud.mostrarPuntaje(pj);
   hud.mostrarVidas(pj);
+  hud.mostrarTiempo();
   spawnerVehiculos.display();
   spawnerVehiculos.move();
   spawnerTroncos.display();

@@ -1,4 +1,4 @@
-class Personaje extends GameObject{
+class Personaje extends GameObject implements IDisplayable{
   private float ancho,alto;
   private int puntaje,vidas;
   

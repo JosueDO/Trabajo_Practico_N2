@@ -17,4 +17,11 @@ class HUD{
     textSize(25);
     text(mensaje,width/30,height-15);
   }
+  public void mostrarTiempo(){
+    fill(0,0,255);
+    
+    String mensaje= "TIME: 100";
+    textSize(25);
+    text(mensaje,width/30*25,height-15);
+  }
 }
